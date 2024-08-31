@@ -1,11 +1,8 @@
-name: Hello World Workflow (Push)
+name: Hello World Workflow (Dispatch)
 
-# if commit message with (No CI) it will not trigger flow
-# Trigger the workflow on push to the main branch
+# Trigger the workflow via github console
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   hello-world:
@@ -16,7 +13,7 @@ jobs:
         run: echo "Hello, World!"
 
       - name: Print Your Name
-        run: echo "Hello, Stephen!"
+        run: echo "Hello, Luqman!" # Replace with your name
 
       - name: Print Multiple Lines
         run: |
